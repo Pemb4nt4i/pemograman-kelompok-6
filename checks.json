@@ -1,0 +1,6 @@
+{"enabled":true,"categories":{}}
+Connection conn = DriverManager.getConnection(
+    "jdbc:mysql://localhost/stok_barang",
+    "root",
+    ""
+);

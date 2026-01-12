@@ -1,0 +1,60 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes. Error detail: AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#
+#  Out of Memory Error
+#
+
+V  [jvm.dll+0x8b4b76]
+V  [jvm.dll+0x8b712e]
+V  [jvm.dll+0x8b7813]
+V  [jvm.dll+0x283d86]
+V  [jvm.dll+0xc1277]
+V  [jvm.dll+0x6d76d9]
+V  [jvm.dll+0x133466]
+V  [jvm.dll+0x3f7ea6]
+V  [jvm.dll+0x85e9ad]
+V  [jvm.dll+0x6d565d]
+C  [ucrtbase.dll+0x37b0]
+C  [KERNEL32.DLL+0x2e8d7]
+C  [ntdll.dll+0x8c53c]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00000206da8dc4e0, length=28, elements={
+0x00000206f9d56bf0, 0x00000206fc2193d0, 0x00000206fc21c750, 0x00000206fc21d730,
+0x00000206fc21e380, 0x00000206fc0114a0, 0x00000206fc012020, 0x00000206fc0162f0,
+0x00000206fc0914a0, 0x00000206d4246210, 0x00000206d436bd30, 0x00000206d45f2630,
+0x00000206d4320a80, 0x00000206d442a440, 0x00000206d442aaa0, 0x00000206d484f710,
+0x00000206d4b9fa90, 0x00000206d90e88c0, 0x00000206d90ea990, 0x00000206d90e8230,
+0x00000206d90e95e0, 0x00000206d90e9c70, 0x00000206db427fd0, 0x00000206db428cf0,
+0x00000206db4272b0, 0x00000206db425870, 0x00000206db429380, 0x00000206db427940
+}
+
+Java Threads: ( => current thread )
+  0x00000206f9d56bf0 JavaThread "main"                              [_thread_blocked, id=23584, stack(0x000000679e000000,0x000000679e100000) (1024K)]
+  0x00000206fc2193d0 JavaThread "Reference Handler"          daemon [_thread_blocked, id=9312, stack(0x000000679e400000,0x000000679e500000) (1024K)]
+  0x00000206fc21c750 JavaThread "Finalizer"                  daemon [_thread_blocked, id=16536, stack(0x000000679e500000,0x000000679e600000) (1024K)]
+  0x00000206fc21d730 JavaThread "Signal Dispatcher"          daemon [_thread_blocked, id=17272, stack(0x000000679e600000,0x000000679e700000) (1024K)]
+=>0x00000206fc21e380 JavaThread "Attach Listener"            daemon [_thread_in_vm, id=6912, stack(0x000000679e700000,0x000000679e800000) (1024K)]
+  0x00000206fc0114a0 JavaThread "Service Thread"             daemon [_thread_blocked, id=22488, stack(0x000000679e800000,0x000000679e900000) (1024K)]
+  0x00000206fc012020 JavaThread "Monitor Deflation Thread"   daemon [_thread_blocked, id=264, stack(0x000000679e900000,0x000000679ea00000) (1024K)]
+  0x00000206fc0162f0 JavaThread "C2 CompilerThread0"         daemon [_thread_blocked, id=16244, stack(0x000000679ea00000,0x000000679eb00000) (1024K)]
+  0x00000206fc0914a0 JavaThread "C1 CompilerThread0"         daemon [_thread_blocked, id=5444, stack(0x000000679eb00000,0x000000679ec00000) (1024K)]
+  0x00000206d4246210 JavaThread "Common-Cleaner"             daemon [_thread_blocked, id=23900, stack(0x000000679ec00000,0x000000679ed00000) (1024K)]
+  0x00000206d436bd30 JavaThread "Notification Thread"        daemon [_thread_blocked, id=15656, stack(0x000000679ed00000,0x000000679ee00000) (1024K)]
+  0x00000206d45f2630 JavaThread "Active Thread: Equinox Container: 309c24ac-f3db-433e-ae6c-cd1953f91032"        [_thread_blocked, id=6680, stack(0x000000679ef00000,0x000000679f000000) (1024K)]
+  0x00000206d4320a80 JavaThread "Refresh Thread: Equinox Container: 309c24ac-f3db-433e-ae6c-cd1953f91032" daemon [_thread_blocked, id=24272, stack(0x000000679f000000,0x000000679f100000) (1024K)]
+  0x00000206d442a440 JavaThread "Framework Event Dispatcher: Equinox Container: 309c24ac-f3db-433e-ae6c-cd1953f91032" daemon [_thread_blocked, id=24388, stack(0x000000679f100000,0x000000679f200000) (1024K)]
+  0x00000206d442aaa0 JavaThread "Start Level: Equinox Container: 309c24ac-f3db-433e-ae6c-cd1953f91032" daemon [_thread_blocked, id=24212, stack(0x000000679f200000,0x000000679f300000) (1024K)]
+  
